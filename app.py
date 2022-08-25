@@ -28,8 +28,7 @@ def register_extensions(app):
 def create_data(app, db):
     with app.app_context():
         db.create_all()
-        with db.session.begin():
-            db.session.add_all()
+
 
 
 app = create_app(Config())
